@@ -24,11 +24,13 @@ F[FFFFF] <- W + F[FFFFF]; si d =1
 
 Para ello iremos a mplab 
 
-1. Vamos en el project y escogemos el wizart y ahí escogemos el Device: **PIC12F508**
+1. Vamos en el project y escogemos el wizart y ahí escogemos el Device: **PIC12F508**  ![](./img/09-02-2023.png)
    
-2. 
+2. ![](img/09-02-2023-02.png)
+3. ![](img/09-02-2023-04.png)
+4. ![](img/09-02-2023-08.png)
 
-3. Ahora se habla del tipo de programa que estaremos utilizando en este microchip ![](./img/09-02-2023-08.png)
+5. Ahora se habla del tipo de programa que estaremos utilizando en este microchip ![](./img/09-02-2023-08.png)
 
 
 ``` assamble
