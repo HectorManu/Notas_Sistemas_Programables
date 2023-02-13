@@ -64,3 +64,30 @@ end
 
 Nota: 
 la memoria de este procesador tiene una memoria capacitiva es decir tiene una tarea que se repetira infinitamente ya que esta no cuenta con **Sistema operativo**. 
+
+## 13/02/2023
+
+El día de hoy compararemos códigos 
+
+````
+; EJEMPLO 01
+	LIST		P=12F508		;Tipo de procesador
+    ;
+	INCLUDE	"P12F508.INC"	;Definición registros internos
+	IMPAR		EQU	0x09		;Def. de par etiqueta valor
+		ORG		0x00		;Inicio programa
+        ;aquí crga el acomulador con una constante
+		MOVLW		b'00000001';Mueve 1 a la posición IMPAR
+        ;
+		MOVWF		IMPAR
+		MOVLW		b'00000010';Mueve 2 a WREG
+BUCLE:	ADDWF		IMPAR,1	;IMPAR + W = IMPAR
+;Si onemos incf W,0 entonces el include como dice w esun bit cero entonces tenemos un error. y la cero es una dirección 
+		NOP				;No hace nada
+		GOTO		BUCLE		;Repite el bucle
+	
+		END				;Fin pograma
+
+````
+
+estamos observano el microchip el cual se encuentra en programas 86 segudo de microchip. 
