@@ -91,3 +91,34 @@ BUCLE:	ADDWF		IMPAR,1	;IMPAR + W = IMPAR
 ````
 
 estamos observano el microchip el cual se encuentra en programas 86 segudo de microchip. 
+
+## 27/02/2023
+
+
+El día d ehoy veremos **MODOS DE DIRECCIONAMIENTO DE 16F846A**
+
+Recordatorio de arquitectura de computadoras
+
+Veremos el **Directo e Indirecto**
+
+Debemos de bajar el archivo de la plataforma
+
+Vemos el primer banco que el **pic16f84A**
+
+- Direccionamiento directo es el recibe el código de instrucción y en esa parte estarán los bit F y la dirección que está en el código de inestrucción será la que esetará directamente en el Banco o Stack 
+
+  - Nota en program memori podems ver el archivo en binario
+- si el opcode es **0086** la dirección directa es **6** ya que el **8** es F de ruta
+
+- direcionamiento **inmediato** lo que se está operando es lo que está allá es decir la direección pasa a ser un número o sea no la ruta a la que se refeerencia esta trabajndo inmediatamente y en el estack está el operando.
+- **indirecto** aquí yo tengo la memoria en la cual tengo una dirección hasta arribal como ejemplo entonces lo que sucede llama a una parte del stack y el poperando no está en esa parte del estack si no en otro lugar este modo permite por ejemplo que en ppython una variable le aasignas una variable entera y después le pones una cadena y entonces lo que sucede es que esta en modo relativo y por eso puede cambiar el tipo de dato.
+
+````
+LIST P16F84A
+INCLUDE <16f84a.INC>
+CUENTA EQU 0X20
+SUMA EQU  0X21
+
+ORG 0
+
+```
