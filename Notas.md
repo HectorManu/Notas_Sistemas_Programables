@@ -113,7 +113,7 @@ Vemos el primer banco que el **pic16f84A**
 - direcionamiento **inmediato** lo que se está operando es lo que está allá es decir la direección pasa a ser un número o sea no la ruta a la que se refeerencia esta trabajndo inmediatamente y en el estack está el operando.
 - **indirecto** aquí yo tengo la memoria en la cual tengo una dirección hasta arribal como ejemplo entonces lo que sucede llama a una parte del stack y el poperando no está en esa parte del estack si no en otro lugar este modo permite por ejemplo que en ppython una variable le aasignas una variable entera y después le pones una cadena y entonces lo que sucede es que esta en modo relativo y por eso puede cambiar el tipo de dato.
 
-````
+```
 LIST P16F84A
 INCLUDE <16f84a.INC>
 CUENTA EQU 0X20
@@ -121,4 +121,58 @@ SUMA EQU  0X21
 
 ORG 0
 
+baf STATUS, RPO ; CAMBIAR EL BANCO 1
+movlw b'00000000' ; w<- 0x00
+movwf TRISB ; TRISB <-w
+bcf STAUS, RPO ; regresar al banco 0
+
+inicio 
+	clrf SUMA ; F [Suma] <-- 0x00
+	movlw 0x0A ; w <-- 0x0A
+	movwf CUENTA ; F[CUENTA] <- w
+ciclo
+	addwf SUMA 1 ; SUMA <- FSUMA +w
+	decfaz CUENTA, 1 ;
+	movfw CUENTA ; w<fcuenta
+	goto ciclo
+	movfw SUMA ; w<--fsuma
+
+salida
+	movfw SUMA ; w<--FSUMA
+	goto salida
+
+end
+
 ```
+
+## 02/03/2023
+
+El dia de hoy se corrigo el direccionamiento indirecto 
+
+LIST p=16F84A
+;usaremos un registro intermediario 
+; el intermediario es FSR
+INCLUDE <P16F84A.INC>
+
+org 0
+movlw 0x0c
+movwf FSR
+
+ciclo 
+	incf FSR; que no lo tome ocn contenido si no como dirección
+	clrf INDF; cuando quiera borar el cero entonces 
+	btfss INDF,1  
+	comf FSR, 3
+	goto ciclo 
+end
+
+cuando vamos al as variabled indf es un indirecto lo que se haees incrementar o borrar el int f 
+
+
+
+**CBLOCK**
+**ENDC**
+ 
+
+ cada que yo ponbo bano 0 entonces le eaeta cmaibnaod el nombre a las instrucciónes y pue al profe no le gusta 
+
