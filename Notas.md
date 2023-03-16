@@ -278,3 +278,21 @@ aquí si podemos modificar el **PC**,
 ### Salto indexao descontrolado
 
 
+
+
+
+
+
+## 16/03/2023
+
+
+Se ponen los resultados en tablas, en vez de que yo caucle en see momento con unaa formula matemática entonces lo que hagoes deslozarlo a pasos. 
+
+la unidad de punto flontante calcula seno, conseno, algoritmos complejos y asi.
+
+- Existe una instrucción **"retlw"**
+  - La instrucción return wth literal in W funcina de form asimilar a que return, procude el retorno de una subrutina pero con hun valor en el registro W. Dicha características es de sua importancia cuando se desea acceder a tablas de datos en la memoria de programa 
+  - el formato de esta instrucción es: 
+  - *rethw k*
+  - donde k es un valor es la ocnstante que se carga en la tabla  y se devuelve enla tabla.
+  - 
