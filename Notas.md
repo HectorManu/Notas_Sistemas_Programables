@@ -295,4 +295,21 @@ la unidad de punto flontante calcula seno, conseno, algoritmos complejos y asi.
   - el formato de esta instrucción es: 
   - *rethw k*
   - donde k es un valor es la ocnstante que se carga en la tabla  y se devuelve enla tabla.
-  - 
+
+
+# 17/04/2023
+Estos chips 
+PIC18F4550
+PIC18F45K50
+
+- Este pequeño procesador tiene capacidad par aponer un pequeño sistema operativo el cual es **monitor** el cual *monitorea* **No tiene que ver con un monitor**
+
+Tiene un controlador USB 2.0
+
+- **Tiene 16 bancos de memoria** pero son muy pequeños son de **255**
+- sigue siendo una arquitectura hardvad
+- tiene un procesador que tiene  dos F 
+- existia mov fw y mov wf un registro del file registre al acomulador peor no existiá la instrucción **mov ff** *porque es una maquina de una dirección* **pero en este procesador sí existe la instrucción ff es decir si podemos poner un solo registro en una sola direccion**
+- en este procesaodr haremos un proyecto real y funcional
+- podemos comprar la tarjeta ya hecha
+- 
