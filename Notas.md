@@ -312,4 +312,16 @@ Tiene un controlador USB 2.0
 - existia mov fw y mov wf un registro del file registre al acomulador peor no existiá la instrucción **mov ff** *porque es una maquina de una dirección* **pero en este procesador sí existe la instrucción ff es decir si podemos poner un solo registro en una sola direccion**
 - en este procesaodr haremos un proyecto real y funcional
 - podemos comprar la tarjeta ya hecha
-- 
+
+
+# 20/04/2023
+
+**ya he comprado el pic controlador**
+[info para ver cómo se utiliza](https://uelectronics.com/producto/unit-micropic4550-tarjeta-de-desarrollo-pic18f4550/)
+
+para modificar el vsr no podmeos utilizar el movimiento normal entonces buscamos una instrucción nromal que pueda mover a bsf
+
+Las funciones que modifican el movlb move el literal to BSR 
+utilizando esa dirección cambiamos de banco entonces lo ponemso en todas las memoria que tengamos 
+
+Le darmos un valor a B que sea 1 
