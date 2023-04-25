@@ -325,3 +325,9 @@ Las funciones que modifican el movlb move el literal to BSR
 utilizando esa dirección cambiamos de banco entonces lo ponemso en todas las memoria que tengamos 
 
 Le darmos un valor a B que sea 1 
+
+
+
+# 24/04/2023
+
+
